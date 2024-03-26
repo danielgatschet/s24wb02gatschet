@@ -5,8 +5,20 @@ block content
   p Welcome to #{title} 
   p Making a change in the paragraph text for the assignment 
 
-  button(type="button", class="btn btn-secondary") I am a button
+  button(type="button", class="btn btn-secondary", onclick="double(value, power)") I am a button
 
   p
 
   div(id="double") Up the amount
+
+  script.
+    var value = 0;
+    var power = 1;
+
+    out = document.getElementById("double")
+    function double(value, power){
+      value += 1
+      power *= 2
+
+      out.innerHTML = "Two to the power of " + value + " is " + power
+    }
