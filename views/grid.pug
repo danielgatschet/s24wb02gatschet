@@ -22,6 +22,13 @@ block content
       - for(let i=0; i<rows; i++) {
         tr#middle
           - for(let j=0; j<cols; j++) {
-              td= i
+              - var value = 1 * (i + 1)
+              if i == 0
+                td= 1
+              else
+                if j+1 > i
+                  td= value
+                else
+                  td= i
           - }
       - }
